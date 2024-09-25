@@ -1,0 +1,222 @@
+INFO:__script___:####2024-09-08 19:45:39.498236#####
+INFO:__script___:Creating the 0 UE
+INFO:__script___:IMSI:208991000001000
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001000','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue0:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue0
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001000 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.136
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 1 UE
+INFO:__script___:IMSI:208991000001001
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001001','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue1:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue1
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001001 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.137
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 2 UE
+INFO:__script___:IMSI:208991000001002
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001002','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue2:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue2
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001002 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.138
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 3 UE
+INFO:__script___:IMSI:208991000001003
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001003','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue3:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue3
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001003 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.139
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 4 UE
+INFO:__script___:IMSI:208991000001004
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001004','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue4:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue4
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001004 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.145
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 5 UE
+INFO:__script___:IMSI:208991000001005
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001005','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue5:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue5
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001005 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.146
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 6 UE
+INFO:__script___:IMSI:208991000001006
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001006','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue6:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue6
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001006 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.147
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 7 UE
+INFO:__script___:IMSI:208991000001007
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001007','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue7:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue7
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001007 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.148
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 8 UE
+INFO:__script___:IMSI:208991000001008
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001008','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue8:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue8
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001008 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.149
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:Creating the 9 UE
+INFO:__script___:IMSI:208991000001009
+INFO:__script___:DB_ENTRY:INSERT INTO `users` VALUES ('208991000001009','1','55000000000000',NULL,'PURGED',50,40000000,100000000,47,0000000000,1,0xfec86ba6eb707ed08905757b1bb44b8f,0,0,0x40,'ebd07771ace8677a',0xc42449363bbad02b66d16bc975d77cc1);
+INFO:__script___:DOCKER_ENTRY:    oai-nr-ue9:
+        image: oaisoftwarealliance/oai-nr-ue:develop
+        privileged: true
+        container_name: rfsim5g-oai-nr-ue9
+        environment:
+            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 --uicc0.imsi 208991000001009 -C 3619200000 --rfsimulator.serveraddr 192.168.71.140 --log_config.global_log_options level,nocolor,time
+        depends_on:
+            - oai-gnb
+        networks:
+            public_net:
+                ipv4_address: 192.168.71.150
+        volumes:
+            - ../../conf_files/nrue.uicc.conf:/opt/oai-nr-ue/etc/nr-ue.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-uesoftmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+INFO:__script___:ENDED Configuration Files EDIT SCRIPT
